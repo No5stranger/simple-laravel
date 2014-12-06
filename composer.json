@@ -6,7 +6,8 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-        "barryvdh/laravel-debugbar": "1.8.3"
+        "barryvdh/laravel-debugbar": "1.8.3",
+        "raveren/kint": "0.9.1"
 	},
 	"autoload": {
 		"classmap": [

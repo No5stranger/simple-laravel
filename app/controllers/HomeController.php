@@ -17,6 +17,9 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
+        //Cookie::queue('aaa', 'abc', 100);
+        \Kint::dump(reset(Request::header()['user-agent']));
+        Cookie::forget('aaa');
         return 'Welcome cjp';
 	}
 
