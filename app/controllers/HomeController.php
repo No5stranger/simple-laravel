@@ -17,7 +17,17 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
+        //Cookie::queue('aaa', 'abc', 100);
+        \Kint::dump(reset(Request::header()['user-agent']));
+        Cookie::forget('aaa');
         return 'Welcome cjp';
 	}
 
+    public function authTest()
+    {
+        \Kint::dump(Hash::make('cjp'));
+        \Kint::dump(Hash::check('cjp', ''));
+        $authResult = Auth::attempt(array('email' => 'cjpcjp@163.com', "password" => 'cjp'));
+        \Kint::dump($authResult);
+    }
 }

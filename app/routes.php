@@ -69,3 +69,5 @@ Route::group(array('before' => 'old'), function()
             {
             });
         });
+
+Route::get('auth', 'HomeController@authTest');
